@@ -36,14 +36,18 @@ const Lil = () => {
 
         return;
       }
-      
-      let current = this.head;
-
-      while (current.next !== null) {
-        current = current.next
+      if (this.head !==null){
+        newNode.previous = this.tail
+        this.tail.next = newNode
+        this.tail = newNode
       }
+      // let current = this.head;
 
-      current.next = newNode;
+      // while (current.next !== null) {
+      //   current = current.next
+      // }
+
+      // current.next = newNode;
     },
 
     removeFromStart: function() {
@@ -54,14 +58,18 @@ const Lil = () => {
     },
 
     removeFromEnd: function() {
-      let current = this.head;
+      const toBeRemoved = this.tail.value
+      this.tail = this.tail.previous
+      this.tail.next = null
 
-      while (current.next.next !== null) {
-        current = current.next
-      }
+      
+      // let current = this.head;
+      // while (current.next.next !== null) {
+      //   current = current.next
+      // }
 
-      const toBeRemoved = current.next.value;
-      current.next = null;
+      // const toBeRemoved = current.next.value;
+      // current.next = null;
 
       return toBeRemoved;
     },
