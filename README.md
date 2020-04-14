@@ -1,8 +1,3 @@
-# Lil
+# Double Lil
 
-Implement a little Linked List according to the test.
-
-```bash
-npm install
-npm test
-```
+You're passing the tests, but there are loops. Refactor until the ONLY loops are in `getAt` and `removeAt`, and you'll be done. : )
