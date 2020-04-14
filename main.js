@@ -2,6 +2,7 @@ const Node = (value) => {
   return {
     value,
     next: null,
+    previous: null,
   }
 }
 
@@ -9,6 +10,7 @@ const Node = (value) => {
 const Lil = () => {
   return {
     head: null,
+    tail: null,
 
     addToStart: function(value) {
       const newNode = Node(value);
